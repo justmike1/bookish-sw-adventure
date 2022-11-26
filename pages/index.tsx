@@ -5,8 +5,12 @@ import Navbar from '../components/navbar';
 
 function Home() {
   return (
-    <Layout home>
+    <div>
+      <h1>
         <Navbar/>
+      </h1>
+      <h2>
+    <Layout home>
       <Head>
         <title>{siteTitle}</title>
       </Head>
@@ -18,6 +22,8 @@ function Home() {
         </p>
       </section>
     </Layout>
+    </h2>
+    </div>
   );
 }
 

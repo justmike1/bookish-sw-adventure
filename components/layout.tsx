@@ -7,7 +7,7 @@ import Link from 'next/link';
 const name = 'Mike Joseph';
 export const siteTitle = 'Next.js Sample Website';
 
-export default function Layout({ children, home }) {
+function Layout({ children, home }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -26,44 +26,10 @@ export default function Layout({ children, home }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <header className={styles.header}>
-        {home ? (
-          <>
-            <Image
-              priority
-              src="/images/profile.jpg"
-              className={utilStyles.borderCircle}
-              height={144}
-              width={144}
-              alt=""
-            />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          </>
-        ) : (
-          <>
-            <Link href="/" legacyBehavior>
-              <Image
-                priority
-                src="/images/profile.jpg"
-                className={utilStyles.borderCircle}
-                height={108}
-                width={108}
-                alt=""
-              />
-            </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/" className={utilStyles.colorInherit} legacyBehavior>
-                {name}
-              </Link>
-            </h2>
-          </>
-        )}
       </header>
       <main>{children}</main>
-      {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">← Back to home</Link>
-        </div>
-      )}
     </div>
   );
 }
+
+export default Layout;

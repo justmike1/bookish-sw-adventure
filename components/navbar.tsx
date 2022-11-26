@@ -1,11 +1,12 @@
 import Link from "next/link";
-import Image from "next/image";
 import React, { useState } from "react";
-import Logo from "./Logo";
 import NavItem from "./navitem";
+import Image from 'next/image';
+import utilStyles from '../styles/utils.module.css';
 
 const MENU_LIST = [
   { text: "Home", href: "/" },
+  { text: "Blog", href: "/blog" },
   { text: "About Us", href: "/about" },
   { text: "Contact", href: "/contact" },
 ];
@@ -16,10 +17,18 @@ const Navbar = () => {
   return (
     <header>
       <nav className={`nav`}>
-        <Link href={"/"}>
-
-          <h1 className="logo">CodeWithMarish</h1>
-
+          <h1 className="logo">
+          <Image
+              priority
+              src="/images/profile.jpg"
+              className={utilStyles.borderCircle}
+              height={144}
+              width={144}
+              alt="mike__profile"
+              ></Image>
+          </h1>
+          <Link href={"/"}>
+          <h2 className="logo__text">Mike Joseph</h2>
         </Link>
         <div
           onClick={() => setNavActive(!navActive)}
