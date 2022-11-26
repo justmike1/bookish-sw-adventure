@@ -3,6 +3,7 @@ import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import Navbar from '../components/navbar';
 import Emoji from '../components/emoji'
+import Link from 'next/link'
 
 function Home() {
   return (
@@ -16,7 +17,7 @@ function Home() {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>Hi there <Emoji symbol='👋' label="wave"/></p>
+        <p>Hi there <Emoji symbol='👋' label="wave"/> <Link href="/api/getPDF">Download my CV</Link></p>
         <p>
           (This is a sample website - you’ll be building a site like this on{' '}
           <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
