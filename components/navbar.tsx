@@ -7,7 +7,6 @@ import utilStyles from '../styles/utils.module.css';
 const MENU_LIST = [
   { text: "Home", href: "/" },
   { text: "Blog", href: "/blog" },
-  { text: "About Us", href: "/about" },
   { text: "Contact", href: "/contact" },
 ];
 const Navbar = () => {

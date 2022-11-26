@@ -3,7 +3,7 @@ import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import Navbar from '../../components/navbar';
 
-function About() {
+function Contact() {
   return (
     <div>
       <h1>
@@ -13,4 +13,4 @@ function About() {
   );
 }
 
-export default About;
+export default Contact;
