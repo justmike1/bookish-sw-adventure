@@ -1,8 +1,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import NavItem from "./navitem";
-import Image from 'next/image';
-import utilStyles from '../styles/utils.module.css';
+import Styles from './navbar.module.css';
 
 const MENU_LIST = [
   { text: "Home", href: "/" },
@@ -15,29 +14,19 @@ const Navbar = () => {
 
   return (
     <header>
-      <nav className={`nav`}>
-          <h1 className="logo">
-          <Image
-              priority
-              src="/images/profile.jpg"
-              className={utilStyles.borderCircle}
-              height={144}
-              width={144}
-              alt="mike__profile"
-              ></Image>
-          </h1>
+      <nav className={Styles.nav}>
           <Link href={"/"}>
-          <h2 className="logo__text">Mike Joseph</h2>
+          <h1 className="logo__text">Mike Joseph</h1>
         </Link>
         <div
           onClick={() => setNavActive(!navActive)}
-          className={`nav__menu-bar`}
+          className={Styles.nav__menu_bar}
         >
           <div></div>
           <div></div>
           <div></div>
         </div>
-        <div className={`${navActive ? "active" : ""} nav__menu-list`}>
+        <div className={`${navActive ? "active" : ""} ${Styles.nav__menu_list}`}>
           {MENU_LIST.map((menu, idx) => (
             <div
               onClick={() => {
