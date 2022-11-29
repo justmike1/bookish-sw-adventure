@@ -1,14 +1,15 @@
 import Head from 'next/head';
-import Layout, { siteTitle } from '../../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import Navbar from '../../components/navbar';
+import Layout from '../../components/layout'
 
 function Contact() {
   return (
     <div>
+      <Layout>
       <h1>
-        <Navbar/>
       </h1>
+      </Layout>
     </div>
   );
 }

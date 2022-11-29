@@ -6,9 +6,10 @@ import Layout, { siteTitle } from '../../components/layout';
 function Blog() {
   return (
     <div>
+      <Layout>
       <h1>
-        <Navbar/>
       </h1>
+      </Layout>
     </div>
   );
 }

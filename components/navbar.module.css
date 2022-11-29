@@ -20,7 +20,7 @@
   padding: 16px;
   justify-content: space-between;
   align-items: center;
-  background-color: #f1f1f1;
+  background-color: #fafafa;
 }
 .nav__menu_bar{
   display: flex;
@@ -45,7 +45,7 @@
   padding: 24px 16px;
   transition: all 0.2s;
   min-height: calc(100vh - 60px);
-  background-color: #f1f1f1;
+  background-color: #fafafa;
 }
 .nav__menu_list.active{
   right: 0;
