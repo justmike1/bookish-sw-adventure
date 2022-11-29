@@ -17,7 +17,7 @@
 } */
 .nav{
   display: flex;
-  padding: 16px;
+  padding: 0%;
   justify-content: space-between;
   align-items: center;
   background-color: #fafafa;
@@ -29,7 +29,7 @@
   cursor: pointer;
 }
 .nav__menu_bar div{
-  width: 40px;
+  width: 80px;
   height: 4px;
   background-color: black;
   border-radius: 2px;
