@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import utilStyles from '../styles/utils.module.css';
 import Navbar from '../../components/navbar';
-import Layout, { siteTitle } from '../../components/layout';
+import Layout from '../../components/layout';
 
 function Blog() {
   return (

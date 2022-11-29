@@ -7,6 +7,8 @@ const MENU_LIST = [
   { text: "Home", href: "/" },
   { text: "Blog", href: "/blog" },
   { text: "Contact", href: "/contact" },
+  { text: "Open My CV", href: `https://resume.io/r/${process.env.ResumeIO_ID}` },
+  { text: "Download My CV", href: "/api/getPDF" },
 ];
 const Navbar = () => {
   const [navActive, setNavActive] = useState(null);
