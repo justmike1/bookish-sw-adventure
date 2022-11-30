@@ -14,8 +14,8 @@ export default function BasedOn() {
   return (
     <Typography sx={{ mt: 6, mb: 3 }} color="text.secondary">
       <LightBulbIcon sx={{ mr: 1, verticalAlign: 'middle' }} />
-      Based on: <Link href="https://mui.com/material-ui/getting-started/overview/">MUI v5 </Link>
-      + <Link href="https://nextjs.org/docs">Next.js</Link> in TypeScript.
+      Based on: <Link target="_blank" href="https://mui.com/material-ui/getting-started/overview/">MUI v5 </Link>
+      + <Link target="_blank" href="https://nextjs.org/docs">Next.js</Link> in TypeScript.
     </Typography>
   );
 }
