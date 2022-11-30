@@ -2,8 +2,6 @@ import Link from "next/link";
 import React, { useState } from "react";
 import NavItem from "./navitem";
 import Styles from './navbar.module.css';
-import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const MENU_LIST = [
   { text: "Linkedin", href: `https://www.linkedin.com/in/${process.env.LINKEDIN_USER}` },
