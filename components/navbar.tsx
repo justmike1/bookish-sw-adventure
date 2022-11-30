@@ -76,7 +76,7 @@ function ResponsiveAppBar() {
             <LinkedInIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
             </Link>
             </IconButton>
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box textAlign='center' sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -128,7 +128,7 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           ></Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box textAlign='center' sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 key={page}
@@ -140,7 +140,7 @@ function ResponsiveAppBar() {
               </Button>
             ))}
           </Box>
-          <Box sx={{ flexGrow: 0 }}>
+          <Box textAlign='center' sx={{ flexGrow: 0 }}>
             <Tooltip title="CV Options">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Mike Joseph" src="/static/images/profile.jpg" />
