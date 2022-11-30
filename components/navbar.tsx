@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { useState, MouseEvent } from 'react'
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -15,18 +15,21 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import Link from '../src/Link';
 
 
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Open My CV', 'Download My CV'];
-
+const pages: string[] = ['Products', 'Pricing', 'Blog'];
+const settings: string[] = ['Open My CV', 'Download My CV'];
+const settingHref: { [key: string]: string } = {
+  'Open My CV' : `https://resume.io/r/${process.env.NEXT_PUBLIC_CV_ID}`,
+  'Download My CV' : `/api/getPDF`
+};
 
 function ResponsiveAppBar() {
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
-  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
+  const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
+  const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
 
-  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
+  const handleOpenNavMenu = (event: MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
+  const handleOpenUserMenu = (event: MouseEvent<HTMLElement>) => {
     setAnchorElUser(event.currentTarget);
   };
 
@@ -135,11 +138,11 @@ function ResponsiveAppBar() {
             >
               {settings.map((setting) => (
                 <MenuItem
-                    LinkComponent={Link}
-                    href="/"
                     key={setting}
                     onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+                  <Link target="_blank" style={{textDecoration:"none"}} href={settingHref[setting]}>
+                  <Typography textAlign="center">{setting} </Typography>
+                  </Link>
                 </MenuItem>
               ))}
             </Menu>
