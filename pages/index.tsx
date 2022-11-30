@@ -19,7 +19,7 @@ export default function Home() {
           Mike Joseph's site
         </Typography>
         <Box maxWidth="sm">
-          <Button variant="contained" component={Link} noLinkStyle href="/">
+          <Button variant="contained" component={Link} noLinkStyle href="/about">
             Go to the about page
           </Button>
         </Box>
