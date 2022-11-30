@@ -3,10 +3,10 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
@@ -17,6 +17,9 @@ import Link from './Link';
 
 
 const pages: string[] = ['FAQ', 'Contact', 'Blog'];
+const pagesRef: { [key: string] : string; } = {};
+for (const p of pages) { pagesRef[p] = `/${p.toLowerCase()}` };
+
 const settings: string[] = ['Open My CV', 'Download My CV'];
 const settingHref: { [key: string]: string } = {
   'Open My CV' : `https://resume.io/r/${process.env.NEXT_PUBLIC_CV_ID}`,
@@ -131,6 +134,7 @@ function ResponsiveAppBar() {
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
+                href={pagesRef[page]}
               >
                 {page}
               </Button>
