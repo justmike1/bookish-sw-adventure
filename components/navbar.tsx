@@ -76,7 +76,7 @@ function ResponsiveAppBar() {
             <LinkedInIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
             </Link>
             </IconButton>
-          <Box textAlign='center' sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ textAlign: 'center', flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -128,7 +128,7 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           ></Typography>
-          <Box textAlign='center' sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ textAlign: 'center', flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 key={page}
