@@ -4,32 +4,27 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Link from '../src/Link';
-import ProTip from '../src/ProTip';
+import BasedOn from '../src/BasedOn';
 import Copyright from '../src/Copyright';
-import Navbar from '../components/navbar'
+import Navbar from '../components/navbar';
+import { boxSx } from '../components/boxSx';
 
 export default function About() {
   return (
     <Container maxWidth="lg">
       <Navbar></Navbar>
       <Box
-        sx={{
-          my: 4,
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
+        sx={boxSx}
       >
         <Typography variant="h4" component="h1" gutterBottom>
-          MUI v5 + Next.js with TypeScript example
+          Mike Joseph's site
         </Typography>
         <Box maxWidth="sm">
           <Button variant="contained" component={Link} noLinkStyle href="/">
             Go to the home page
           </Button>
         </Box>
-        <ProTip />
+        <BasedOn />
         <Copyright />
       </Box>
     </Container>
