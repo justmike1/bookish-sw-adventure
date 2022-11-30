@@ -12,15 +12,19 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Link from './Link';
 
 
-const pages: string[] = ['Products', 'Pricing', 'Blog'];
+const pages: string[] = ['FAQ', 'Contact', 'Blog'];
 const settings: string[] = ['Open My CV', 'Download My CV'];
 const settingHref: { [key: string]: string } = {
   'Open My CV' : `https://resume.io/r/${process.env.NEXT_PUBLIC_CV_ID}`,
   'Download My CV' : `/api/getPDF`
 };
+
+var linkedinUrl: string = process.env.NEXT_PUBLIC_LINKEDIN_USER!;
+var githubUrl: string = process.env.NEXT_PUBLIC_GITHUB_USER!;
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
@@ -45,10 +49,30 @@ function ResponsiveAppBar() {
     <AppBar style={{ background: '#2E3B55' }} position='absolute'>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Link href="/" style={{ color: 'black' }} target="_blank">
+        <IconButton
+              size="large"
+              aria-label="account of current user"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleOpenNavMenu}
+              color="inherit"
+            >
+          <Link href={githubUrl} style={{ color: 'white' }} target="_blank">
             <GitHubIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
             </Link>
-
+            </IconButton>
+            <IconButton
+              size="large"
+              aria-label="account of current user"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleOpenNavMenu}
+              color="inherit"
+            >
+            <Link href={linkedinUrl} style={{ color: 'white' }} target="_blank">
+            <LinkedInIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+            </Link>
+            </IconButton>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -85,7 +109,6 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
-          <GitHubIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
@@ -113,7 +136,6 @@ function ResponsiveAppBar() {
               </Button>
             ))}
           </Box>
-
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="CV Options">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
