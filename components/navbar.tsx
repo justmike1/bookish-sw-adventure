@@ -12,7 +12,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import Link from '../src/Link';
+import Link from './Link';
 
 
 const pages: string[] = ['Products', 'Pricing', 'Blog'];

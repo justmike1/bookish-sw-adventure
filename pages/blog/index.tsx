@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import utilStyles from '../styles/utils.module.css';
-import Navbar from '../../components/navbar';
+import Navbar from '../../components/Navbar';
 import Layout from '../../components/layout';
 
 function Blog() {

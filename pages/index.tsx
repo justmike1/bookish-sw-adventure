@@ -1,12 +1,12 @@
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import Link from '../src/Link';
+import Link from '../components/Link';
 import Button from '@mui/material/Button';
-import BasedOn from '../src/BasedOn';
-import Copyright from '../src/Copyright';
-import Navbar from '../components/navbar';
-import { boxSx } from '../components/boxSx';
+import BasedOn from '../components/BasedOn';
+import Copyright from '../components/Copyright';
+import Navbar from '../components/Navbar';
+import { boxSx } from '../components/BoxSx';
 
 export default function Home() {
   return (
