@@ -39,7 +39,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar style={{ background: '#2E3B55' }} position='absolute'>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Link href="/" style={{ color: 'black' }} target="_blank">

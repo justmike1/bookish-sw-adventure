@@ -13,7 +13,7 @@ export default function Home() {
       <Navbar></Navbar>
       <Box
         sx={{
-          my: 4,
+          my: 12,
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
