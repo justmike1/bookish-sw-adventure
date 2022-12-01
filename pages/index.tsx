@@ -7,18 +7,49 @@ import BasedOn from '../components/BasedOn';
 import Copyright from '../components/Copyright';
 import Navbar from '../components/navbar';
 import { boxSx } from '../components/boxSx';
+import MoreStories from '../components/more-stories'
+import HeroPost from '../components/hero-post'
+import Intro from '../components/intro'
+import Layout from '../components/layout'
+import { getAllPosts } from '../lib/api'
+import Head from 'next/head'
+import { CMS_NAME } from '../lib/constants'
+import Post from '../interfaces/post'
 
-export default function Home() {
+type Props = {
+  allPosts: Post[]
+}
+
+export default function Index({ allPosts }: Props) {
+  const heroPost = allPosts[0]
+  const morePosts = allPosts.slice(1)
   return (
+    <Layout>
+      <Head>
+        <title>Next.js Blog Example with {CMS_NAME}</title>
+      </Head>
     <Container maxWidth="lg">
       <Navbar></Navbar>
       <Box
         sx={boxSx}
       >
-        <Typography variant="h4" component="h1" gutterBottom>
-          Mike Joseph's site
-        </Typography>
-        <Box maxWidth="sm">
+        <Box 
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        minHeight="100vh"
+        maxWidth="sm">
+        <Intro />
+          {heroPost && (
+            <HeroPost
+              title={heroPost.title}
+              coverImage={heroPost.coverImage}
+              date={heroPost.date}
+              slug={heroPost.slug}
+              excerpt={heroPost.excerpt}
+            />
+          )}
+          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
           <Button variant="contained" component={Link} noLinkStyle href="/about">
             Go to the about page
           </Button>
@@ -27,5 +58,20 @@ export default function Home() {
         <Copyright />
       </Box>
     </Container>
+    </Layout>
   );
+}
+
+export const getStaticProps = async () => {
+  const allPosts = getAllPosts([
+    'title',
+    'date',
+    'slug',
+    'coverImage',
+    'excerpt',
+  ])
+
+  return {
+    props: { allPosts },
+  }
 }
