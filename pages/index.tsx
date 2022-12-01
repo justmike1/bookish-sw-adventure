@@ -5,8 +5,8 @@ import Link from '../components/Link';
 import Button from '@mui/material/Button';
 import BasedOn from '../components/BasedOn';
 import Copyright from '../components/Copyright';
-import Navbar from '../components/Navbar';
-import { boxSx } from '../components/BoxSx';
+import Navbar from '../components/navbar';
+import { boxSx } from '../components/boxSx';
 
 export default function Home() {
   return (
