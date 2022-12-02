@@ -1,12 +1,7 @@
 import Container from '@mui/material/Container';
-import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import Link from '../components/Link';
-import Button from '@mui/material/Button';
-import BasedOn from '../components/BasedOn';
-import Copyright from '../components/Copyright';
 import Navbar from '../components/navbar';
-import { boxSx } from '../components/boxSx';
+import Bottom from '../components/BottomPage';
 import MoreStories from '../components/more-stories'
 import HeroPost from '../components/hero-post'
 import Intro from '../components/intro'
@@ -30,15 +25,7 @@ export default function Index({ allPosts }: Props) {
       </Head>
     <Container maxWidth="lg">
       <Navbar></Navbar>
-      <Box
-        sx={boxSx}
-      >
-        <Box 
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        minHeight="100vh"
-        maxWidth="sm">
+      <Box>
         <Intro />
           {heroPost && (
             <HeroPost
@@ -50,13 +37,8 @@ export default function Index({ allPosts }: Props) {
             />
           )}
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-          <Button variant="contained" component={Link} noLinkStyle href="/about">
-            Go to the about page
-          </Button>
-        </Box>
-        <BasedOn />
-        <Copyright />
-      </Box>
+          </Box>
+          <Bottom page='about'></Bottom>
     </Container>
     </Layout>
   );
