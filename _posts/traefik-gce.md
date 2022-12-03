@@ -2,7 +2,7 @@
 title: 'Setup traefik proxy on GKE behind GCE Load Balancer with HTTPS & Cloud Armor'
 excerpt: 'Traefik is a leading modern reverse proxy and load balancer that makes deploying microservices easy. Traefik integrates with your existing infrastructure components and configures itself automatically and dynamically.'
 coverImage: '/assets/blog/traefik-gce/diagram.jpg'
-date: '2020-03-16T05:35:07.322Z'
+date: '2022-12-03T20:20:00.000Z'
 ogImage:
   url: '/assets/blog/traefik-gce/diagram.jpg'
 ---
