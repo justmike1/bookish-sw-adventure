@@ -1,7 +1,6 @@
-import Container from '@mui/material/Container'
-import cn from 'classnames'
-import { EXAMPLE_PATH } from '../lib/constants'
-import Navbar from './navbar'
+import Container from '@mui/material/Container';
+import cn from 'classnames';
+import Navbar from './navbar';
 
 type Props = {
   preview?: boolean

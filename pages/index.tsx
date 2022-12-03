@@ -2,11 +2,11 @@ import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Navbar from '../components/navbar';
 import Bottom, { boxSx } from '../components/BottomPage';
-import MoreStories from '../components/more-stories'
-import HeroPost from '../components/hero-post'
-import Layout from '../components/layout'
-import { getAllPosts } from '../lib/api'
-import Post from '../interfaces/post'
+import MoreStories from '../components/more-stories';
+import HeroPost from '../components/hero-post';
+import Layout from '../components/layout';
+import { getAllPosts } from '../lib/api';
+import Post from '../interfaces/post';
 
 type Props = {
   allPosts: Post[]
