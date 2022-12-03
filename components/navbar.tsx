@@ -22,8 +22,8 @@ for (const p of pages) { pagesRef[p] = `/${p.toLowerCase()}` };
 
 const settings: string[] = ['Open My CV', 'Download My CV'];
 const settingHref: { [key: string]: string } = {
-  'Open My CV' : `https://resume.io/r/${process.env.NEXT_PUBLIC_CV_ID}`,
-  'Download My CV' : `/api/getPDF`
+  'Open My CV' : process.env.NEXT_PUBLIC_OPEN_TO_WORK != "false" ? `https://resume.io/r/${process.env.NEXT_PUBLIC_CV_ID}` : `/work`,
+  'Download My CV' : process.env.NEXT_PUBLIC_OPEN_TO_WORK != "false" ? `/api/getPDF` : `/work` 
 };
 
 var linkedinUrl: string = process.env.NEXT_PUBLIC_LINKEDIN_USER!;

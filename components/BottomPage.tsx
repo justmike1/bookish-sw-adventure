@@ -8,7 +8,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import LightModeIcon from '@mui/icons-material/LightMode';
 
-const boxSx = {
+export const boxSx = {
     my: 12,
     display: 'flex',
     flexDirection: 'column',
